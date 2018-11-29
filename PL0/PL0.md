@@ -15,41 +15,41 @@
 
 ```
 <程序> ::= <分程序>.
-<prog> → program <id>；<block>
+<prog> → program <id>; <block>
 
 <分程序> ::= [<常量说明部分>] [<变量说明部分>][<过程说明部分>] <语句>
 <block> → [<condecl>][<vardecl>][<proc>] <body>
 
-<常量说明部分> ::= CONST<常量定义> { ,<常量定义> } ;
+<常量说明部分> ::= CONST <常量定义> { ,<常量定义> } ;
 <condecl> → const <const>{, <const>};
 
 <常量定义> ::= <标识符> = <无符号整数>
 <const> → <id> := <integer>
 
-<变量说明部分> ::= VAR<标识符> { , <标识符> } ; 
+<变量说明部分> ::= VAR <标识符> { , <标识符> } ;
 <vardecl> → var <id>{, <id>};
 
-<过程说明部分> ::= <过程首部><分程序>{; <过程说明部分> };
-<过程首部> ::= PROCEDURE<标识符> ； 
+<过程说明部分> ::= <过程首部> <分程序>{; <过程说明部分> } ;
+<过程首部> ::= PROCEDURE <标识符> ;
 <proc> → procedure <id> ([<id>{, <id>}]); <block>{; <proc>}
 
-<复合语句> ::= BEGIN<语句> {;<语句>} END
+<复合语句> ::= BEGIN<语句> {; <语句>} END
 <body> → begin <statement>{; <statement>} end
 
 <语句> ::= <赋值语句> | <条件语句> | <当型循环语句> | <过程调用语句> | <读语句> | <写语句> | <复合语句> | <空>
 <statement> → <id> := <exp>                                     <赋值语句> ::= <标识符> := <表达式>
 
-               |if <lexp> then <statement> [else <statement>]    <条件语句>  ::=IF<条件> THEN<语句>
+               |if <lexp> then <statement> [else <statement>]   <条件语句>  ::=IF <条件> THEN <语句>
 
-               |while <lexp> do <statement>                     <当型循环语句> ::= WHILE<条件> DO <语句>
+               |while <lexp> do <statement>                     <当型循环语句> ::= WHILE <条件> DO <语句>
 
-               |call <id> ([<exp>{, <exp>}])                      <过程调用语句> ::= CALL<标识符> 
+               |call <id> ([<exp>{, <exp>}])                    <过程调用语句> ::= CALL <标识符>
 
                |<body>
 
                |read (<id>{, <id>})                             <读语句>  ::= READ '('<标识符> {,<标识符>} ')'
 
-               |write (<exp>{, <exp>})                           <写语句>  ::= WRITE '('<表达式>{, <表达式>} ')'
+               |write (<exp>{, <exp>})                          <写语句>  ::= WRITE '('<表达式> {, <表达式>} ')'
 
 <条件> ::= <表达式> <关系运算符> <表达式> | ODD<表达式> 
 <lexp> → <exp> <lop> <exp> | odd <exp>
@@ -114,25 +114,25 @@ d → 0 | 1 | 2 | ... | 8 | 9
 保留字
 
 ```
-const, var, procedure, begin, end, if, then, else, call, while, do, read, write
+const  var  procedure  begin  end  if  then  else  call  while  do  read  write
 ```
 
 运算符
 
 ```
-+, -, *, /, odd（奇偶判断）
++  -  *  /  odd（奇偶判断）
 ```
 
 界符
 
 ```
-, ; .
+,  ;  .
 ```
 
 关系运算符
 
 ```
-=, #, >, >=, <, <=
+=  #  >  >=  <  <=
 ```
 
 数字
@@ -163,7 +163,7 @@ const, var, procedure, begin, end, if, then, else, call, while, do, read, write
 - 确保符号表可以体现作用域规则
 - 确保标识符属性与上下文环境一致
 - 确保标识符先声明后引用
-- 确保标识符的长度、数字的位数、过程嵌套说明的层数符合PL/语言的约定
+- 确保标识符的长度、数字的位数、过程嵌套说明的层数符合PL/0语言的约定
 - 提示语义错误信息
 
 1. 符号表
@@ -194,7 +194,7 @@ const, var, procedure, begin, end, if, then, else, call, while, do, read, write
 
 短语层恢复
 
-- 在进入某个语法单位时，调用TEST函数， 检查当前符号是否属于该语法单位的开始符号集合。若不属于，则滤去开始符号和后跟符号集合外的所有符号
+- 在进入某个语法单位时，调用TEST函数，检查当前符号是否属于该语法单位的开始符号集合。若不属于，则滤去开始符号和后跟符号集合外的所有符号
 - 在语法单位分析结束时，调用TEST函数，检查当前符号是否属于调用该语法单位时应有的后跟符号集合若不属于，则滤去后跟符号和开始符号集合外的所有符号
 
 后跟符号集随调用深度逐层增加，增加的符号与调用位置相关
@@ -285,11 +285,11 @@ PL/0 编译程序运行时的存储分配策略采用栈式动态分配，并用
 
 名称|符号|作用
 -|-|-
-栈顶寄存器|Ｔ|指向当最新分配的过程运行所需的数据空间在数据区Ｓ中的位置
-基址寄存器|Ｂ|指向每个过程被调用时，在数据区Ｓ中给它分配的数据段起始地址（也称基地址）
+栈顶寄存器|T|指向当最新分配的过程运行所需的数据空间在数据区S中的位置
+基址寄存器|B|指向每个过程被调用时，在数据区S中给它分配的数据段起始地址（也称基地址）
 静态链|SL|指向定义该过程的直接外过程（或主程序）运行时最新数据段的基地址【保存该过程直接外层的活动记录首地址】
 动态链|DL|指向调用该过程前正在运行过程的数据段基地址【调用者的活动记录首地址】
-返回地址|RA|记录调用该过程时目标程序的断点，即当时程序地址寄存器Ｐ的值。也就是调用过程指令的下一条指令的地址
+返回地址|RA|记录调用该过程时目标程序的断点，即当时程序地址寄存器P的值。也就是调用过程指令的下一条指令的地址
 
 ##### 解释过程
 
@@ -316,7 +316,7 @@ saved = ['begin', 'call', 'const', 'do', 'end', 'if', 'odd', # 奇偶判断
          'procedure', 'read', 'then', 'var', 'while', 'write', 'else']
 
 # 操作符
-optr = ['lit', 'opr', 'lod', 'sto', 'cal', int', 'jmp', 'jpc', 'lda', 'sta']
+optr = ['lit', 'opr', 'lod', 'sto', 'cal', 'int', 'jmp', 'jpc', 'lda', 'sta']
 ```
 
 #### 结构
@@ -406,10 +406,10 @@ def readfile(self, path)
 
 ```python
 # 子程序处理
-def block(self, level, next)                # 层差、后跟集合
+def block(self, level, next)                # 层差、后跟集
 
 # 常数/变量定义（复用）
-def dup(self, level, dx, kind=None)         # 层差、类型、地址
+def dup(self, level, dx, kind=None)         # 层差、地址、类型
 
 # 常量定义
 def const_declaration(self, level, dx)      # 层差、地址
@@ -445,7 +445,7 @@ def add_item(self, name, level, dx)         # 名称、层差、地址
 def find_item(self, name)                   # 名称
 
 # 生成虚拟机代码
-def generate_code(self, f, l, a):           # 操作码、层差、不同含义
+def generate_code(self, f, l, a)            # 操作码、层差、不同含义
 ```
 
 #### 错误处理

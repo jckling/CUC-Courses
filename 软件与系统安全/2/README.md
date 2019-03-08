@@ -217,5 +217,5 @@ OPTIONAL HEADER VALUES
 - [PE文件解析 系列文章(一)](https://bbs.pediy.com/thread-247114.htm)
 - [PE Format](https://docs.microsoft.com/zh-cn/windows/desktop/Debug/pe-format)
 - [PE .rdata section contents](https://reverseengineering.stackexchange.com/questions/6941/pe-rdata-section-contents)
-- [PE Format Walkthrough](PE Format Walkthrough.pdf)
-- [PE Format Layout](PE Format Layout.pdf)
+- [PE Format Walkthrough](PE-Format-Walkthrough.pdf)
+- [PE Format Layout](PE-Format-Layout.pdf)

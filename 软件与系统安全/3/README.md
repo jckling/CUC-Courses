@@ -6,7 +6,7 @@
 
 原理：找到存放字符串的内存地址，对其进行修改，再让进程继续执行。
 
-使用Windbg依次点击 `File - Attach to a Process(F6)` 附加到notepad进程。列出已分配的堆，并在其中查找字符串 `ABCDABCD`。
+使用WinDbg依次点击 `File - Attach to a Process(F6)` 附加到notepad进程。列出已分配的堆，并在其中查找字符串 `ABCDABCD`。
 
 ```
 # 查看所有堆

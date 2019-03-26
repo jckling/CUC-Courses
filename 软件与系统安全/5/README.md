@@ -8,11 +8,19 @@
 
 #### API hook
 
+找到dll在内存中的加载位置，通过修改第一个字节（引发断点异常）来对参数进行修改，最后再复原，继续调用函数。
+
 ![](api_result.gif)
 
 #### IAT hook
 
-to do...
+写一个假函数dll，再用dll注入的方式让目标进程加载假函数dll。当调用函数 `WriteFile` 时将会调用假函数，将缓存内容修改后再调用原来的函数，以达到修改保存内容的目的。
+
+![](inject.png)
+
+IAT Hook 的结果
+
+![](iat_result.gif)
 
 #### 参阅
 - [Taking a Snapshot and Viewing Processes](https://docs.microsoft.com/zh-cn/windows/desktop/ToolHelp/taking-a-snapshot-and-viewing-processes)

@@ -22,6 +22,15 @@ IAT Hook 的结果
 
 ![](iat_result.gif)
 
+#### 代码
+
+API hook 参考《逆向工程核心原理》，稍作修改适用于 x64 环境
+
+IAT hook 参考 [iathook/IATHook.c](https://github.com/tinysec/iathook/blob/master/IATHook.c) 对源代码中查找函数的部分进行了修改
+- 另外实验中只用到了 hook ，因此并没有写 unhook 部分的代码
+
+详见代码注释
+
 #### 参阅
 - [Taking a Snapshot and Viewing Processes](https://docs.microsoft.com/zh-cn/windows/desktop/ToolHelp/taking-a-snapshot-and-viewing-processes)
 - [寄存器使用](https://docs.microsoft.com/zh-cn/previous-versions/visualstudio/visual-studio-2008/9z1stfyw(v%3dvs.90))

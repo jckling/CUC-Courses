@@ -25,4 +25,4 @@
 详见代码注释
 
 #### 参阅
-- [Taking a Snapshot and Viewing Processes](https://docs.microsoft.com/en-us/windows/desktop/api/fileapi/nf-fileapi-findnextfilew)
+- [FindNextFileW function](https://docs.microsoft.com/en-us/windows/desktop/api/fileapi/nf-fileapi-findnextfilew)

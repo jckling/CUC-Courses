@@ -69,4 +69,4 @@ marp: true
 - [The Art, Science, and Engineering of Fuzzing: A Survey](https://arxiv.org/pdf/1812.00140.pdf)
 - [一张图片让iPhone自动关机](https://xw.qq.com/partner/hwbrowser/20190531A0ML8T/20190531A0ML8T00?ADTAG=hwb&pgv_ref=hwb&appid=hwbrowser&ctype=news)
 - [一张图片在微信中点开让苹果手机重启](https://bbs.pediy.com/thread-251582.htm)
-- [一张图片在微信中点开让苹果手机重启 的简单分析](https://bbs.pediy.com/thread-251597.htm)
+- [一张图片在微信中点开让苹果手机重启的简单分析](https://bbs.pediy.com/thread-251597.htm)

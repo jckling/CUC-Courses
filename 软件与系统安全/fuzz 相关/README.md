@@ -46,3 +46,9 @@ apt-get install libc++-8-dev libc++abi-8-dev
 # OpenMP
 apt-get install libomp-8-dev
 ```
+
+## 参考链接
+- [LLVM Debian/Ubuntu nightly packages](http://apt.llvm.org/)
+- [libfuzzer-workshop](https://github.com/Dor1s/libfuzzer-workshop)
+- [libFuzzer Tutorial](https://github.com/google/fuzzer-test-suite/blob/master/tutorial/libFuzzerTutorial.md)
+- [Finding security vulnerabilities with modern fuzzing techniques](http://archive.hack.lu/2018/Slides_Fuzzing_Workshop_Hack.lu_v1.0.pdf)

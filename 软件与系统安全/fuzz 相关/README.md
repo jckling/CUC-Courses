@@ -47,6 +47,14 @@ apt-get install libc++-8-dev libc++abi-8-dev
 apt-get install libomp-8-dev
 ```
 
+```bash
+sudo apt install gcc make autoconf automake pkg-config zlib1g-dev curl
+
+# environmrnt
+export LDFLAGS="-L/usr/local/zlib/lib"
+export CPPFLAGS="-I /usr/local/zlib/include"
+```
+
 ## 参考链接
 - [LLVM Debian/Ubuntu nightly packages](http://apt.llvm.org/)
 - [libfuzzer-workshop](https://github.com/Dor1s/libfuzzer-workshop)

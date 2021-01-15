@@ -1,0 +1,15 @@
+src = test
+
+all: $(src).exe
+
+clean:
+	if exist $(src).exe del $(src).exe
+	if exist $(src).obj del $(src).obj
+
+rebuild: clean all
+
+$(src).exe: $(src).obj 
+	link /nologo /entry:main User32.lib Kernel32.lib $(src).obj /out:$(src).exe
+
+$(src).obj: $(src).cpp
+	cl.exe /c $(src).cpp

@@ -1,10 +1,3 @@
-Font license info
-
-
-## Font Awesome
-
-   Copyright (C) 2012 by Dave Gandy
-
-   Author:    Dave Gandy
-   License:   SIL ()
-   Homepage:  http://fortawesome.github.com/Font-Awesome/
+version https://git-lfs.github.com/spec/v1
+oid sha256:1483a496c2e204937fc5b6afd2e396582daef5a36abb545b7c1546287a6b93fc
+size 188

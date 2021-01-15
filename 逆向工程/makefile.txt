@@ -1,15 +1,3 @@
-src = test
-
-all: $(src).exe
-
-clean:
-	if exist $(src).exe del $(src).exe
-	if exist $(src).obj del $(src).obj
-
-rebuild: clean all
-
-$(src).exe: $(src).obj 
-	link /nologo /entry:main User32.lib Kernel32.lib $(src).obj /out:$(src).exe
-
-$(src).obj: $(src).cpp
-	cl.exe /c $(src).cpp
+version https://git-lfs.github.com/spec/v1
+oid sha256:2dd7e29a9739103f4a2ceb9e3aa88aa20b300aeaef3f5889ec19a8af90e054a2
+size 289

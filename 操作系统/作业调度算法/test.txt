@@ -1,5 +1,3 @@
-1 JA 02:40 20
-2 JB 02:50 30
-3 JC 02:55 10
-4 JD 03:00 24
-5 JE 03:05 6
+version https://git-lfs.github.com/spec/v1
+oid sha256:ef1e06742a9aa7a424fb429156ce94ad6ec17c6e7971368d95a534817e95ff37
+size 72

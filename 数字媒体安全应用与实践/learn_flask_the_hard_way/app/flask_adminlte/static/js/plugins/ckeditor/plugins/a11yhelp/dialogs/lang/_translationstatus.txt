@@ -1,25 +1,3 @@
-Copyright (c) 2003-2013, CKSource - Frederico Knabben. All rights reserved.
-For licensing, see LICENSE.md or http://ckeditor.com/license
-
-cs.js      Found: 30 Missing: 0
-cy.js      Found: 30 Missing: 0
-da.js      Found: 12 Missing: 18
-de.js      Found: 30 Missing: 0
-el.js      Found: 25 Missing: 5
-eo.js      Found: 30 Missing: 0
-fa.js      Found: 30 Missing: 0
-fi.js      Found: 30 Missing: 0
-fr.js      Found: 30 Missing: 0
-gu.js      Found: 12 Missing: 18
-he.js      Found: 30 Missing: 0
-it.js      Found: 30 Missing: 0
-mk.js      Found: 5 Missing: 25
-nb.js      Found: 30 Missing: 0
-nl.js      Found: 30 Missing: 0
-no.js      Found: 30 Missing: 0
-pt-br.js   Found: 30 Missing: 0
-ro.js      Found: 6 Missing: 24
-tr.js      Found: 30 Missing: 0
-ug.js      Found: 27 Missing: 3
-vi.js      Found: 6 Missing: 24
-zh-cn.js   Found: 30 Missing: 0
+version https://git-lfs.github.com/spec/v1
+oid sha256:f2f84b5ba5dc5f0b3fa762b825189f30ff8d68d3a39046970b54b7d376a1aa27
+size 869

@@ -4,6 +4,8 @@
 
 ## 书签 🔖
 
+- [传媒网安教学 Wiki](https://c4pr1c3.github.io/cuc-wiki/)
+
 ### 本科毕设
 
 <details>
